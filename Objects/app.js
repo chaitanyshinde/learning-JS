@@ -34,3 +34,9 @@ const father = new person("rama", 45, "Mumbai");
 const mother = new person("lata", 40, "Banglore");
 
 console.log(father);
+
+
+//
+const obj = new Object();
+obj.first = "ram";
+console.log(obj);
