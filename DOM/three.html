@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color:#212121; color:#fff;">
+
+    <ul class="languages">
+        <li class="javascript">Javascript</li>
+    </ul>
+
+</body>
+<script>
+    const addLan = (langName) => {
+        const listItem = document.createElement("li");
+        listItem.appendChild(document.createTextNode(langName)); //if you use innerHTML then you have to traverse whole tree. but by using append textNode you can directly add.
+        document.querySelector(".languages").appendChild(listItem);
+    }
+
+    addLan("Java");
+    addLan("CPP");
+    addLan("Python");
+    addLan("Flutter");
+
+    //EDIT:
+    const secondLan = document.querySelector("li:nth-child(2)");
+    // secondLan.innerHTML = "Mojo";
+    const newLi = document.createElement("li");
+    newLi.appendChild(document.createTextNode("Mojo"));
+    secondLan.replaceWith(newLi)
+
+    const firstLan = document.querySelector("li:first-child");
+    firstLan.outerHTML = "<li>Typescript</li>"
+
+
+    //Remove
+    const lastLan = document.querySelector("li:last-child");
+    lastLan.remove();
+
+</script>
+
+
+</html>
