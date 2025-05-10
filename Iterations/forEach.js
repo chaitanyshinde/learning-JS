@@ -2,13 +2,13 @@
 
 const arr = [6, 8, 10, 12];
 arr.forEach((element) => {
-  //   console.log(element);
+    // console.log(element);
 });
 
 function print(item) {
   console.log(item);
 }
-// arr.forEach(print); //direct fun
+arr.forEach(print); //direct fun
 
 //whole usecase
 arr.forEach((item, index, arr) => {
@@ -34,7 +34,7 @@ const myCoding = [
 
 myCoding.forEach((item) => {
   //item means one whole {}
-  console.log(item.languageName, item.lanShortName);
+  // console.log(item.languageName, item.lanShortName);
 });
 
 //***IMP : forEach does not return any this. if you replace log line with return you will get undefined....so "filter" is used which returns values
